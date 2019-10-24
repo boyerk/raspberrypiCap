@@ -10,6 +10,8 @@ class Master:
         while True:
             print("Rain sensor Value: "+ str(rain.rainSens()))
             print(str(BME.BMESens1()))
+            print(str(BME.BMESens2()))
+            print(str(BME.BMESens3()))
             time.sleep(self.runTime)
 obj1 = Master(3)
 obj1.run()
