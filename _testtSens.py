@@ -1,13 +1,15 @@
-import time
-from Adafruit_BME280 import *
+import board
+import busio
+import adafruit_bme280
+
+
 
 def BMESens():
-    bme = BME280(t_mode=BME280_OSAMPLE_8,h_mode=BME280_OSAMPLE_8,p_mode=BME280_OSAMPLE_8)
-    T,H,P = (None, None, None)
+    i2c = busio.I2C(board.SCL, board.SDA)
+    bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
 
-
-    T = bme.read_temperature()
-    H = bme.read_humidity()
-    P = bme.read_pressure()
+    T = bme280.temperature
+    H = bme280.humidity
+    P = bme280.pressure
+    
     return (T,H,P)
-        
