@@ -1,4 +1,5 @@
 import board
+import time
 import busio
 import adafruit_bme280
 
@@ -13,3 +14,9 @@ def BMESens2():
     return("Humidity: %0.1f %%" % H)
 def BMESens3():
     return("Pressure: %0.1f hPa" % P)
+if __name__ == "__main__":
+    while True:
+        print(BMESens1())
+        print(BMESens2())
+        print(BMESens3())
+        time.sleep(3)

@@ -10,7 +10,9 @@ def rainSens():
         return "It's raining - get the washing in!"
     else:
         return "not raining"
+if __name__ == '__main__':
+    while True:
+        print(rainSens())
+        time.sleep(3)
         
-        # insert your other code or functions here
-        # e.g. tweet, SMS, email, take a photo etc.
     
