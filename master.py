@@ -9,7 +9,7 @@ class Master:
     def run(self):
         while True:
             print("Rain sensor Value: "+ str(rain.rainSens()))
-            print("BME280 Values: "+ str(BME.BMESens()))
+            print(str(BME.BMESens1()))
             time.sleep(self.runTime)
 obj1 = Master(3)
 obj1.run()
