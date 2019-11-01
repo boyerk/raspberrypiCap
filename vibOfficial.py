@@ -2,9 +2,19 @@ from gpiozero import Button
 import time
 
 vibrationSwitch = Button(17)
-while True:
+
+def VibrationDetected():
+    
     if vibrationSwitch.is_pressed:
-        print("button is pressed")
+        return("button is pressed")
     else:
-        print("NOT PRESSED")
-        time.sleep(0.1)
+        return("NOT PRESSED")
+    
+
+if __name__ == '__main__':      
+    while True:
+        if vibrationSwitch.is_pressed:
+            print("button is pressed")
+        else:
+            print("NOT PRESSED")
+            time.sleep(0.1)

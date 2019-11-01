@@ -1,6 +1,7 @@
 import raindrp as rain
 import bmeSens as BME
 import uvSens as uvs
+import vibOfficial as vib
 import time
 
 
@@ -16,6 +17,7 @@ class Master:
             print("UV A: ", uvs.uvaVal())
             print("UV B: ", uvs.uvbVal())
             print("UV Index: ", uvs.uviVal())
+            print("wind detection: ", vib.VibrationDetected())
             time.sleep(self.runTime)
             
 if __name__ == "__main__":
