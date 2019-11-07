@@ -1,7 +1,7 @@
-import raindrp as rain
+import raindropExpand as rain
 import bmeSens as BME
 import uvSens as uvs
-import vibOfficial as vib
+import vibExpanded as vib
 import time
 
 
