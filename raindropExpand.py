@@ -11,7 +11,7 @@ def rainSens():
     raindrop = mcp.get_pin(9)
     raindrop.direction = digitalio.Direction.INPUT
     if raindrop.value == False:
-        return "It's raining - get the washing in!"
+        return "It's raining!"
     else:
         return "not raining"
 if __name__ == '__main__':

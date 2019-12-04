@@ -12,8 +12,10 @@ class Master:
         counter = 0
         while True:
             counter += 1
-            print("wind detection: ", vib.VibrationDetected())
-            print(counter)
+            
+            if vib.VibrationDetected() == True:
+                print("WIND DETECTED!")
+            #print(counter)
             if counter % 30 == 0:
                 print("Rain sensor Value: "+ str(rain.rainSens()))
                 print(str(BME.BMESens1()))

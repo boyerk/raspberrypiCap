@@ -13,9 +13,9 @@ def VibrationDetected():
     vibSwitch1.direction = digitalio.Direction.INPUT
     vibSwitch1.pull = digitalio.Pull.UP
     if vibSwitch1.value == False:
-        return("vibration Detected!")
+        return True
     else:
-        return("No Shake")
+        return False
     
 
 if __name__ == '__main__':      
