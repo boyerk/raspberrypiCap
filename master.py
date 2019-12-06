@@ -28,6 +28,6 @@ class Master:
             time.sleep(self.runTime)
             
 if __name__ == "__main__":
-    MasterFile = Master(0.1)
+    MasterFile = Master(0.25)
     MasterFile.run()
         
