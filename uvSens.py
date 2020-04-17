@@ -12,7 +12,7 @@ def uvaVal():
 def uvbVal():
     return(veml.uvb)
 def uviVal():
-    return(veml.uv_index)
+    return(round(veml.uv_index))
 if __name__ == "__main__":
     while True:
         print("UV A: ", uvaVal())
