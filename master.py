@@ -1,6 +1,7 @@
 import raindropExpand as rain
-import bmeSens as BME
+#import bmeSens as BME
 import weatherProofTempHumid as TempAndHumidity
+import tubePressureSens as PressureSens
 import uvSens as uvs
 import vibExpanded as vib
 import time
@@ -30,7 +31,7 @@ class Master:
                 file = open("/home/pi/Desktop/Sketches/sketchFinalBeforeCleanUp/data/testing.txt", "w")
                 file.write(str(Master(0).normie(TempAndHumidity.Temp(), 50, 101)))
                 file.write("\n" + str(Master(0).normie(TempAndHumidity.Humidity(), 10, 80)))
-                file.write("\n" + str(Master(0).normie(BME.BMESens3(), 970, 1030)))
+                file.write("\n" + str(Master(0).normie(PressureSens.Pressure(), 970, 1030)))
                 file.write("\n" + str(rain.rainSens()))
                 if windCount >= 10:
                     file.write("\n" + "1")
@@ -40,12 +41,12 @@ class Master:
                 file.close()
                 print(str(TempAndHumidity.Temp()))
                 print(str(TempAndHumidity.Humidity()))
-                print(str(BME.BMESens3()))
+                print(str(PressureSens.Pressure()))
                 print(str(windCount))
                 print("UV A: ", uvs.uvaVal())
                 print("UV B: ", uvs.uvbVal())
                 print("UV Index: ", uvs.uviVal())
-                print(str(counter))
+                #print(str(counter))
                 counter = 0
                 windCount = 0
                 
