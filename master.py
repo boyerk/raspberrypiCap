@@ -28,8 +28,8 @@ class Master:
             if counter % 100 == 0:
                 print("Rain sensor Value: "+ str(rain.rainSens()))
                 file = open("/home/pi/Desktop/Sketches/sketchFinalBeforeCleanUp/data/testing.txt", "w")
-                file.write(str(Master(0).normie(BME.BMESens1(), 50, 101)))
-                file.write("\n" + str(Master(0).normie(BME.BMESens2(), 10, 80)))
+                file.write(str(Master(0).normie(TempAndHumidity.Temp(), 50, 101)))
+                file.write("\n" + str(Master(0).normie(TempAndHumidity.Humidity(), 10, 80)))
                 file.write("\n" + str(Master(0).normie(BME.BMESens3(), 970, 1030)))
                 file.write("\n" + str(rain.rainSens()))
                 if windCount >= 10:
@@ -38,8 +38,8 @@ class Master:
                     file.write("\n" + "0")
                 file.write("\n" + str(Master(0).normie(uvs.uviVal(), 0, 11)))
                 file.close()
-                print(str(BME.BMESens1()))
-                print(str(BME.BMESens2()))
+                print(str(TempAndHumidity.Temp()))
+                print(str(TempAndHumidity.Humidity()))
                 print(str(BME.BMESens3()))
                 print(str(windCount))
                 print("UV A: ", uvs.uvaVal())
